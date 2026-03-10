@@ -7,24 +7,32 @@
   html { scroll-behavior: smooth; }
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8fafc;
-    color: #0f172a;
+    background-color: #070a14;
+    color: #e6f1ff;
+    background-image:
+      radial-gradient(1200px 600px at 10% -10%, rgba(34, 211, 238, 0.12), transparent 60%),
+      radial-gradient(900px 500px at 90% 0%, rgba(59, 130, 246, 0.10), transparent 55%);
     -webkit-font-smoothing: antialiased;
+  }
+  #root {
+    background-color: #070a14;
+    color: #e6f1ff;
+    min-height: 100vh;
   }
   h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
 
   ::-webkit-scrollbar { width: 6px; height: 6px; }
-  ::-webkit-scrollbar-track { background: #e2e8f0; }
-  ::-webkit-scrollbar-thumb { background: #cbd5f5; border-radius: 3px; }
-  ::-webkit-scrollbar-thumb:hover { background: #93c5fd; }
+  ::-webkit-scrollbar-track { background: #0b1224; }
+  ::-webkit-scrollbar-thumb { background: #1f2a44; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #22d3ee; }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 active:scale-95;
+    @apply bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-400 hover:to-brand-600 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 active:scale-95 shadow-glow-sm;
   }
   .btn-secondary {
-    @apply bg-surface-card border border-surface-border hover:border-brand-500 text-ink font-semibold px-6 py-3 rounded-xl transition-all duration-200 active:scale-95;
+    @apply bg-surface-card border border-surface-border hover:border-brand-400 text-ink font-semibold px-6 py-3 rounded-xl transition-all duration-200 active:scale-95;
   }
   .btn-ghost {
     @apply text-ink-muted hover:text-ink hover:bg-surface-card px-4 py-2 rounded-lg transition-all duration-200;
@@ -33,15 +41,15 @@
     @apply bg-surface-card border border-surface-border rounded-2xl;
   }
   .card-hover {
-    @apply card hover:border-brand-500/40 hover:shadow-card-hover transition-all duration-300;
+    @apply card hover:border-brand-400/50 hover:shadow-card-hover transition-all duration-300;
   }
   .input-field {
-    @apply w-full bg-surface-card border border-surface-border rounded-xl px-4 py-3 text-ink placeholder-ink-faint focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/30 transition-all duration-200;
+    @apply w-full bg-surface-card border border-surface-border rounded-xl px-4 py-3 text-ink placeholder-ink-faint focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400/30 transition-all duration-200;
   }
   .badge {
     @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold;
   }
-  .badge-blue   { @apply badge bg-brand-500/15 text-brand-400; }
+  .badge-blue   { @apply badge bg-brand-500/15 text-brand-300; }
   .badge-green  { @apply badge bg-emerald-500/15 text-emerald-400; }
   .badge-red    { @apply badge bg-red-500/15 text-red-400; }
   .badge-orange { @apply badge bg-amber-500/15 text-amber-400; }
@@ -60,9 +68,9 @@
     @apply card p-6 flex flex-col gap-2 relative overflow-hidden;
   }
   .pill-tab { @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer; }
-  .pill-tab-active   { @apply bg-brand-500 text-white; }
+  .pill-tab-active   { @apply bg-brand-500 text-white shadow-glow-sm; }
   .pill-tab-inactive { @apply text-ink-muted hover:text-ink hover:bg-surface-muted; }
   .section-title    { @apply font-display text-2xl font-bold text-ink; }
   .section-subtitle { @apply text-ink-muted text-sm; }
-  .text-gradient    { @apply bg-gradient-to-r from-brand-400 to-brand-600 bg-clip-text text-transparent; }
+  .text-gradient    { @apply bg-gradient-to-r from-brand-300 to-brand-500 bg-clip-text text-transparent; }
 }

@@ -9,8 +9,8 @@ const BANNERS = [
     sub: 'Explore top brands at unbeatable prices',
     cta: 'Shop Now',
     href: '/products',
-    gradient: 'from-blue-950 via-blue-900/80 to-surface',
-    accent: 'text-blue-300',
+    gradient: 'bg-brand-900/40',
+    accent: 'text-ink-muted',
     tag: 'New Arrivals',
   },
   {
@@ -19,8 +19,8 @@ const BANNERS = [
     sub: 'Curated styles from premium brands worldwide',
     cta: 'Explore Fashion',
     href: '/products?category=clothing',
-    gradient: 'from-indigo-950 via-indigo-900/70 to-surface',
-    accent: 'text-indigo-300',
+    gradient: 'bg-brand-900/40',
+    accent: 'text-ink-muted',
     tag: 'Trending Now',
   },
   {
@@ -29,8 +29,8 @@ const BANNERS = [
     sub: 'Limited time deals across all categories',
     cta: 'Grab Deals',
     href: '/products',
-    gradient: 'from-cyan-950 via-cyan-900/60 to-surface',
-    accent: 'text-cyan-300',
+    gradient: 'bg-brand-900/40',
+    accent: 'text-ink-muted',
     tag: 'Hot Deals',
   },
 ]
@@ -47,7 +47,7 @@ const BannerSlider = () => {
 
   return (
     <div className="relative overflow-hidden rounded-3xl h-[300px] sm:h-[360px] lg:h-[420px]">
-      <div className={`absolute inset-0 bg-gradient-to-r ${banner.gradient} transition-all duration-700`} />
+      <div className={`absolute inset-0 ${banner.gradient} transition-all duration-700`} />
 
       {/* Decorative mesh */}
       <div className="absolute inset-0 opacity-[0.06]" style={{
@@ -74,11 +74,11 @@ const BannerSlider = () => {
       </div>
 
       <button onClick={() => setCurrent(c => (c - 1 + BANNERS.length) % BANNERS.length)}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/70 hover:bg-white rounded-full flex items-center justify-center transition-colors text-brand-700">
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-9 h-9 bg-black/40 hover:bg-black/70 rounded-full flex items-center justify-center transition-colors">
         <ChevronLeft className="w-5 h-5" />
       </button>
       <button onClick={() => setCurrent(c => (c + 1) % BANNERS.length)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/70 hover:bg-white rounded-full flex items-center justify-center transition-colors text-brand-700">
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-9 h-9 bg-black/40 hover:bg-black/70 rounded-full flex items-center justify-center transition-colors">
         <ChevronRight className="w-5 h-5" />
       </button>
 

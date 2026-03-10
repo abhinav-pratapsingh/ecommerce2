@@ -34,7 +34,7 @@ import AdminUsers      from './pages/admin/AdminUsers'
 
 // Customer layout wrapper
 const CustomerLayout = ({ children }) => (
-  <div className="min-h-screen flex flex-col">
+  <div className="min-h-screen flex flex-col bg-surface text-ink">
     <Navbar />
     <main className="flex-1">{children}</main>
     <Footer />

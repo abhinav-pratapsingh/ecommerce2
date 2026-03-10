@@ -92,15 +92,15 @@ const Home = () => {
       </section>
 
       {/* CTA Banner */}
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-brand-700 to-brand-900 px-8 sm:px-14 py-12">
+      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-brand-800 to-brand-900 px-8 sm:px-14 py-12">
         <div className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: 'radial-gradient(circle at 80% 50%, white 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+          style={{ backgroundImage: 'radial-gradient(circle at 80% 50%, rgba(255,255,255,0.9) 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
         <div className="absolute -right-10 -bottom-10 w-72 h-72 bg-brand-500/20 rounded-full blur-3xl" />
         <div className="relative max-w-lg">
           <span className="inline-block text-xs font-mono bg-brand-500/30 text-brand-200 border border-brand-500/30 px-3 py-1 rounded-full mb-4 uppercase tracking-widest">Limited Time Offer</span>
           <h2 className="font-display font-black text-3xl sm:text-4xl text-white mb-3">Get 20% Off Your First Order</h2>
-          <p className="text-brand-200 mb-6">Use code <span className="font-mono font-bold bg-white/20 px-2 py-0.5 rounded">VAULT20</span> at checkout</p>
-          <Link to="/register" className="inline-flex bg-white text-brand-700 font-bold px-6 py-3 rounded-xl hover:bg-brand-50 transition-colors shadow-glow-brand">
+          <p className="text-brand-200 mb-6">Use code <span className="font-mono font-bold bg-surface-card/40 px-2 py-0.5 rounded">VAULT20</span> at checkout</p>
+          <Link to="/register" className="inline-flex bg-gradient-to-r from-brand-500 to-brand-600 text-white font-bold px-6 py-3 rounded-xl hover:from-brand-400 hover:to-brand-600 transition-colors shadow-glow-brand">
             Create Account &rarr;
           </Link>
         </div>

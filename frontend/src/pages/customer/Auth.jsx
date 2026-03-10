@@ -21,7 +21,7 @@ export const Login = () => {
   return (
     <div className="min-h-screen flex">
       {/* Left decorative panel */}
-      <div className="hidden lg:flex flex-1 bg-gradient-to-br from-brand-600 via-brand-500 to-brand-400 items-center justify-center p-12 relative overflow-hidden">
+      <div className="hidden lg:flex flex-1 bg-gradient-to-br from-brand-900 via-brand-800 to-surface-card items-center justify-center p-12 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(circle, #60a5fa 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
         <div className="relative text-center">

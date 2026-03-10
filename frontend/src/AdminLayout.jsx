@@ -7,7 +7,7 @@ const AdminLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <div className="flex h-screen overflow-hidden bg-surface">
+    <div className="flex h-screen overflow-hidden bg-surface text-ink">
       {/* Mobile overlay */}
       {sidebarOpen && (
         <div className="fixed inset-0 z-40 bg-black/60 lg:hidden" onClick={() => setSidebarOpen(false)} />
@@ -21,7 +21,7 @@ const AdminLayout = () => {
       {/* Main content */}
       <div className="flex-1 flex flex-col min-h-0 overflow-hidden">
         {/* Mobile top bar */}
-        <header className="flex items-center gap-3 px-4 py-3 border-b border-surface-border bg-surface-card lg:hidden">
+        <header className="flex items-center gap-3 px-4 py-3 border-b border-surface-border bg-surface-card text-ink lg:hidden">
           <button onClick={() => setSidebarOpen(true)} className="p-2 rounded-lg hover:bg-surface-muted transition-colors">
             <Menu className="w-5 h-5" />
           </button>
@@ -29,7 +29,7 @@ const AdminLayout = () => {
         </header>
 
         {/* Page content */}
-        <main className="flex-1 overflow-y-auto p-6">
+        <main className="flex-1 overflow-y-auto p-6 bg-surface text-ink">
           <Outlet />
         </main>
       </div>
