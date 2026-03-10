@@ -68,7 +68,7 @@ const BannerSlider = () => {
           </h2>
           <p className={`font-body text-base sm:text-lg ${banner.accent} mb-6`}>{banner.sub}</p>
           <Link to={banner.href} className="inline-flex btn-primary text-sm sm:text-base shadow-glow-sm">
-            {banner.cta} ->
+            {banner.cta} &rarr;
           </Link>
         </div>
       </div>

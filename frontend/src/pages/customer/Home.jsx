@@ -101,7 +101,7 @@ const Home = () => {
           <h2 className="font-display font-black text-3xl sm:text-4xl text-white mb-3">Get 20% Off Your First Order</h2>
           <p className="text-brand-200 mb-6">Use code <span className="font-mono font-bold bg-white/20 px-2 py-0.5 rounded">VAULT20</span> at checkout</p>
           <Link to="/register" className="inline-flex bg-white text-brand-700 font-bold px-6 py-3 rounded-xl hover:bg-brand-50 transition-colors shadow-glow-brand">
-            Create Account ->
+            Create Account &rarr;
           </Link>
         </div>
       </section>
