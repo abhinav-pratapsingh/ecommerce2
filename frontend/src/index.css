@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #e2e8f0; }
+  ::-webkit-scrollbar-thumb { background: #cbd5f5; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #93c5fd; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 active:scale-95;
+  }
+  .btn-secondary {
+    @apply bg-surface-card border border-surface-border hover:border-brand-500 text-ink font-semibold px-6 py-3 rounded-xl transition-all duration-200 active:scale-95;
+  }
+  .btn-ghost {
+    @apply text-ink-muted hover:text-ink hover:bg-surface-card px-4 py-2 rounded-lg transition-all duration-200;
+  }
+  .card {
+    @apply bg-surface-card border border-surface-border rounded-2xl;
+  }
+  .card-hover {
+    @apply card hover:border-brand-500/40 hover:shadow-card-hover transition-all duration-300;
+  }
+  .input-field {
+    @apply w-full bg-surface-card border border-surface-border rounded-xl px-4 py-3 text-ink placeholder-ink-faint focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/30 transition-all duration-200;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+  .badge-blue   { @apply badge bg-brand-500/15 text-brand-400; }
+  .badge-green  { @apply badge bg-emerald-500/15 text-emerald-400; }
+  .badge-red    { @apply badge bg-red-500/15 text-red-400; }
+  .badge-orange { @apply badge bg-amber-500/15 text-amber-400; }
+  .badge-gray   { @apply badge bg-surface-muted/50 text-ink-muted; }
+
+  /* Keep badge-orange alias for order statuses */
+  .badge-orange { @apply badge bg-amber-500/15 text-amber-400; }
+
+  .skeleton {
+    @apply bg-surface-muted rounded-lg;
+    background: linear-gradient(90deg, #111827 25%, #1f2937 50%, #111827 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  .stat-card {
+    @apply card p-6 flex flex-col gap-2 relative overflow-hidden;
+  }
+  .pill-tab { @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer; }
+  .pill-tab-active   { @apply bg-brand-500 text-white; }
+  .pill-tab-inactive { @apply text-ink-muted hover:text-ink hover:bg-surface-muted; }
+  .section-title    { @apply font-display text-2xl font-bold text-ink; }
+  .section-subtitle { @apply text-ink-muted text-sm; }
+  .text-gradient    { @apply bg-gradient-to-r from-brand-400 to-brand-600 bg-clip-text text-transparent; }
+}
